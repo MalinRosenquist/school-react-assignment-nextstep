@@ -39,9 +39,7 @@
 
 ## 📸 Screenshots
 
-![Screen width 1800px](./docs/screenshots/screenshot-1800.png)
-
-![Screen width 320px](./docs/screenshots/screenshot-320.png)
+![Screen width 1800px](./docs/nextstep.png)
 
 ## 📄 License
 
