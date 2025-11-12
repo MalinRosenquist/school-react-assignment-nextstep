@@ -6,29 +6,33 @@ import { SavedJobs } from "./pages/SavedJobs";
 import { Error } from "./pages/Error";
 import AboutNextStep from "./pages/AboutNextStep";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+	[
+		{
+			path: "/",
+			element: <Layout />,
+			errorElement: <Error />,
+			children: [
+				{
+					path: "/",
+					element: <Home />,
+				},
+				{
+					path: "/jobad/:id",
+					element: <JobAd />,
+				},
+				{
+					path: "/saved-jobs",
+					element: <SavedJobs />,
+				},
+				{
+					path: "about",
+					element: <AboutNextStep />,
+				},
+			],
+		},
+	],
 	{
-		path: "/",
-		element: <Layout />,
-		errorElement: <Error />,
-		children: [
-			{
-				path: "/",
-				element: <Home />,
-			},
-			{
-				path: "/jobad/:id",
-				element: <JobAd />,
-			},
-      {
-				path: "/saved-jobs",
-				element: <SavedJobs />,
-			},
-			{ 
-        path: "about",
-        element: <AboutNextStep />,
-      },
-		],
+		basename: import.meta.env.DEV ? "" : "/school-react-assignment-nextstep",
 	},
-]);
-
+);
